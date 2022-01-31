@@ -37,9 +37,9 @@
     "stderr"
   ],
   "dependencies": {
-    "chalk": "^4.1.0",
+    "chalk": "^5.0.0",
     "dedent": "^0.7.0",
-    "marked": "^1.2.4",
-    "marked-terminal": "^4.1.0"
+    "marked": "^4.0.12",
+    "marked-terminal": "^5.1.1"
   }
 }
