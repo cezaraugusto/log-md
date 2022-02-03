@@ -1,25 +1,70 @@
 {
+  "version": "0.4.0",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cezaraugusto/log-md.git"
-  },
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "engines": {
     "node": ">=10"
   },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
   "name": "log-md",
-  "version": "0.3.0",
-  "description": "Output Markdown using console.log for CLI",
-  "main": "module.js",
-  "types": "types.d.ts",
   "author": {
     "name": "Cezar Augusto",
     "email": "boss@cezaraugusto.net",
     "url": "https://cezaraugusto.net"
   },
-  "files": [
-    "module.js"
+  "description": "Output Markdown using console.log for CLI",
+  "module": "dist/log-md.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/log-md.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/log-md.esm.js",
+      "limit": "10 KB"
+    }
   ],
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "dedent": "^0.7.0",
+    "marked": "^4.0.12",
+    "marked-terminal": "^5.1.1"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^7.0.5",
+    "@types/dedent": "^0.7.0",
+    "@types/marked": "^4.0.2",
+    "@types/marked-terminal": "^3.1.3",
+    "husky": "^7.0.4",
+    "size-limit": "^7.0.5",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5"
+  },
   "keywords": [
     "console",
     "log",
@@ -35,11 +80,5 @@
     "stdout",
     "stdinfo",
     "stderr"
-  ],
-  "dependencies": {
-    "chalk": "^5.0.0",
-    "dedent": "^0.7.0",
-    "marked": "^4.0.12",
-    "marked-terminal": "^5.1.1"
-  }
+  ]
 }
