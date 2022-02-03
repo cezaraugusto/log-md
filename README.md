@@ -20,7 +20,7 @@ npm install log-md
 Outputs the message in the image above
 
 ```js
-import {log} from 'log-md'
+import log from 'log-md'
 
 log(`
   # log-md
@@ -30,7 +30,7 @@ log(`
 
   * Supports lists
   * Inline code like \`path.join()\`
-  * Bold like **BOLD** and __italic__ too.
+  * Bold like **BOLD** too.
 
   Also supports multi-line code blocks:
 
