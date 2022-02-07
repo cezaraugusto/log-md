@@ -18,7 +18,7 @@
     "require": "./dist/module.cjs",
     "default": "./dist/module.modern.js"
   },
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Output Markdown using console.log for CLI",
   "author": {
     "name": "Cezar Augusto",
