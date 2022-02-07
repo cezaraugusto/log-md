@@ -8,10 +8,18 @@
     "node": ">=10"
   },
   "name": "log-md",
+  "type": "module",
+  "source": "module.js",
+  "main": "./dist/module.cjs",
+  "module": "./dist/module.module.js",
+  "unpkg": "./dist/module.umd.js",
+  "types": "module.d.ts",
+  "exports": {
+    "require": "./dist/module.cjs",
+    "default": "./dist/module.modern.js"
+  },
   "version": "0.5.0",
   "description": "Output Markdown using console.log for CLI",
-  "main": "module.js",
-  "types": "types.d.ts",
   "author": {
     "name": "Cezar Augusto",
     "email": "boss@cezaraugusto.net",
@@ -41,5 +49,12 @@
     "dedent": "^0.7.0",
     "marked": "^4.0.12",
     "marked-terminal": "^5.1.1"
+  },
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "devDependencies": {
+    "microbundle": "^0.14.2"
   }
 }
