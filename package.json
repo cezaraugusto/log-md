@@ -53,7 +53,8 @@
   },
   "scripts": {
     "build": "microbundle",
-    "dev": "microbundle watch"
+    "dev": "microbundle watch",
+    "test": "echo 'No tests'"
   },
   "devDependencies": {
     "microbundle": "^0.14.2"
