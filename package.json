@@ -26,7 +26,8 @@
     "url": "https://cezaraugusto.net"
   },
   "files": [
-    "module.js"
+    "module.d.ts",
+    "dist/"
   ],
   "keywords": [
     "console",
