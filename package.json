@@ -27,7 +27,7 @@
   },
   "files": [
     "module.d.ts",
-    "dist/"
+    "dist"
   ],
   "keywords": [
     "console",
