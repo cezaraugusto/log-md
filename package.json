@@ -48,7 +48,7 @@
   "dependencies": {
     "chalk": "^5.0.0",
     "dedent": "^0.7.0",
-    "marked": "^4.0.12",
+    "marked": "^4.3.0",
     "marked-terminal": "^5.1.1"
   },
   "scripts": {
