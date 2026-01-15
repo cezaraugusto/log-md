@@ -1,7 +1,13 @@
-[npm-image]: https://img.shields.io/npm/v/log-md.svg
-[npm-url]: https://npmjs.org/package/log-md
+[npm-version-image]: https://img.shields.io/npm/v/log-md.svg?color=0971fe
+[npm-version-url]: https://www.npmjs.com/package/log-md
+[npm-downloads-image]: https://img.shields.io/npm/dm/log-md.svg?color=0971fe
+[npm-downloads-url]: https://www.npmjs.com/package/log-md
+[action-image]: https://github.com/cezaraugusto/log-md/actions/workflows/ci.yml/badge.svg?branch=main
+[action-url]: https://github.com/cezaraugusto/log-md/actions
 
-# log-md [![npm][npm-image]][npm-url]
+[![Version][npm-version-image]][npm-version-url] [![Downloads][npm-downloads-image]][npm-downloads-url] [![workflow][action-image]][action-url]
+
+# log-md
 
 > Output Markdown using console.log for CLI
 

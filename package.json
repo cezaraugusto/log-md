@@ -54,8 +54,10 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "test": "echo 'No tests'"
+    "test": "echo 'No tests'",
+    "publish:provenance": "np patch --no-tests --any-branch --yolo --message 'release: %s' --provenance"
   },
+  "publishConfig": { "provenance": true },
   "devDependencies": {
     "microbundle": "^0.14.2"
   }
