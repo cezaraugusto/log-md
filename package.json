@@ -5,30 +5,41 @@
     "url": "https://github.com/cezaraugusto/log-md.git"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=18"
   },
   "name": "log-md",
-  "type": "module",
-  "source": "module.js",
-  "main": "./dist/module.cjs",
-  "module": "./dist/module.module.js",
-  "unpkg": "./dist/module.umd.js",
-  "types": "module.d.ts",
-  "exports": {
-    "require": "./dist/module.cjs",
-    "default": "./dist/module.modern.js"
-  },
-  "version": "0.6.0",
+  "version": "0.7.1",
   "description": "Output Markdown using console.log for CLI",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "check": "biome check --write",
+    "dev": "rslib build --watch",
+    "format": "biome format --write",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build",
+    "publish:provenance": "np patch --no-tests --any-branch --yolo --message 'release: %s' --provenance"
+  },
+  "publishConfig": {
+    "provenance": true
+  },
   "author": {
     "name": "Cezar Augusto",
     "email": "boss@cezaraugusto.net",
     "url": "https://cezaraugusto.net"
   },
-  "files": [
-    "module.d.ts",
-    "dist"
-  ],
   "keywords": [
     "console",
     "log",
@@ -46,19 +57,16 @@
     "stderr"
   ],
   "dependencies": {
-    "chalk": "^5.0.0",
-    "dedent": "^0.7.0",
-    "marked": "^4.0.12",
-    "marked-terminal": "^5.1.1"
+    "dedent": "^1.6.0",
+    "marked": "^4.3.0",
+    "marked-terminal": "^5.2.0",
+    "pintor": "^0.3.1"
   },
-  "scripts": {
-    "build": "microbundle",
-    "dev": "microbundle watch",
-    "test": "echo 'No tests'",
-    "publish:provenance": "np patch --no-tests --any-branch --yolo --message 'release: %s' --provenance"
-  },
-  "publishConfig": { "provenance": true },
   "devDependencies": {
-    "microbundle": "^0.14.2"
+    "@biomejs/biome": "^1.9.4",
+    "@rslib/core": "^0.6.9",
+    "@types/node": "^22.8.1",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.3"
   }
 }
