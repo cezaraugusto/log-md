@@ -1,5 +1,5 @@
 declare module 'marked-terminal' {
-  type StyleFunction = (text: string) => string;
+  type StyleFunction = (text: string) => string
 
   export interface TerminalRendererOptions {
     code?: StyleFunction;
@@ -21,6 +21,6 @@ declare module 'marked-terminal' {
   }
 
   export default class TerminalRenderer {
-    constructor(options?: TerminalRendererOptions, highlightOptions?: unknown);
+    constructor (options?: TerminalRendererOptions, highlightOptions?: unknown)
   }
 }

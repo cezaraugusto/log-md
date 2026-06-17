@@ -8,5 +8,5 @@ declare module 'marked' {
     (src: string, options?: MarkedOptions): string;
     parse(src: string, options?: MarkedOptions): string;
     setOptions(options: MarkedOptions): void;
-  };
+  }
 }
