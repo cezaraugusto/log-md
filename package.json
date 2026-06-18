@@ -56,18 +56,18 @@
     "stderr"
   ],
   "dependencies": {
-    "dedent": "^1.6.0",
+    "dedent": "^1.7.2",
     "marked": "^4.3.0",
     "marked-terminal": "^5.2.0",
-    "pintor": "^0.3.1"
+    "pintor": "^0.3.2"
   },
   "devDependencies": {
-    "@rslib/core": "^0.6.9",
-    "@types/node": "^22.8.1",
+    "@rslib/core": "^0.23.0",
+    "@types/node": "^25.9.3",
     "eslint": "^10.5.0",
-    "eslint-config-auditor": "^2.0.0",
-    "typescript": "^5.8.3",
-    "vitest": "^3.1.3"
+    "eslint-config-auditor": "^2.3.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
   },
   "packageManager": "pnpm@9.9.0",
   "pnpm": {
