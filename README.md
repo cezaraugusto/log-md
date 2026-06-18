@@ -68,6 +68,15 @@ Default: `false`
 
 Adds a line-break on top and botton of your messages.
 
+## Related projects
+
+* [pintor](https://github.com/cezaraugusto/pintor)
+* [mklicense](https://github.com/cezaraugusto/mklicense)
+* [prefers-yarn](https://github.com/cezaraugusto/prefers-yarn)
+* [go-git-it](https://github.com/cezaraugusto/go-git-it)
+* [git-precision](https://github.com/cezaraugusto/git-precision)
+* [isolated-deps](https://github.com/cezaraugusto/isolated-deps)
+
 ## License
 
 MIT (c) Cezar Augusto.
