@@ -8,7 +8,7 @@
     "node": ">=18"
   },
   "name": "log-md",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Output Markdown using console.log for CLI",
   "type": "module",
   "exports": {
