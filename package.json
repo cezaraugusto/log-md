@@ -58,7 +58,7 @@
   "dependencies": {
     "dedent": "^1.7.2",
     "marked": "^4.3.0",
-    "marked-terminal": "^5.2.0",
+    "marked-terminal": "^7.3.0",
     "pintor": "^0.3.2"
   },
   "devDependencies": {
