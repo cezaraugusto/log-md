@@ -5,6 +5,12 @@ updates:
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 5
+    ignore:
+      # marked 5+ and marked-terminal 6+ drop the rendering API pintor relies on
+      - dependency-name: "marked"
+        versions: [">=5"]
+      - dependency-name: "marked-terminal"
+        versions: [">=6"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
