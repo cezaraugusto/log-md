@@ -15,13 +15,13 @@
 
 ## Installation
 
-```
+```bash
 npm install log-md
 ```
 
 ## Usage
 
-Outputs the message in the image above
+`log-md` parses the Markdown string and prints it to the terminal as styled, colorized text using `console.log` (headings, bold, italic, strikethrough, inline code, lists, and fenced code blocks), producing the output shown in the image above.
 
 ```js
 import {log} from 'log-md'
@@ -66,7 +66,7 @@ The markdown message you want to parse.
 Type: `boolean`\
 Default: `false`
 
-Adds a line-break on top and botton of your messages.
+Adds a line-break on top and bottom of your messages.
 
 ## Related projects
 
