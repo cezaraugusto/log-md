@@ -21,9 +21,6 @@ marked.setOptions({
 
 /**
  * Output Markdown using console.log for CLI.
- *
- * @param message - The Markdown string (or any value) to pretty print.
- * @param gutter - When true, pads the output with blank lines above and below.
  */
 export default function log (message: unknown, gutter?: boolean): void {
   // Replace line breaks with \n and remove top-level quotes
@@ -31,10 +28,8 @@ export default function log (message: unknown, gutter?: boolean): void {
   // markdown and can pretty print to console
   const unquotedMessage = JSON.stringify(message).replace(/"(.*)"/, '$1')
 
-  // Add marked to parse Markdown
   const multiColorMessage = marked.parse(unquotedMessage)
 
-  // Finally replace \n with real line-breaks
   const prettyPrintMessage = multiColorMessage.replace(/\\n/g, '\n')
 
   const dedentLines = dedent(prettyPrintMessage)
