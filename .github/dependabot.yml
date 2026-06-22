@@ -6,11 +6,9 @@ updates:
       interval: "weekly"
     open-pull-requests-limit: 5
     ignore:
-      # marked 5+ and marked-terminal 6+ drop the rendering API pintor relies on
+      # marked-terminal 7.x peers marked <16; hold marked here until it catches up
       - dependency-name: "marked"
-        versions: [">=5"]
-      - dependency-name: "marked-terminal"
-        versions: [">=6"]
+        versions: [">=16"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

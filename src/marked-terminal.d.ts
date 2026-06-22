@@ -1,4 +1,6 @@
 declare module 'marked-terminal' {
+  import type {MarkedExtension} from 'marked'
+
   type StyleFunction = (text: string) => string
 
   export interface TerminalRendererOptions {
@@ -20,7 +22,11 @@ declare module 'marked-terminal' {
     [key: string]: unknown;
   }
 
-  export default class TerminalRenderer {
-    constructor (options?: TerminalRendererOptions, highlightOptions?: unknown)
-  }
+  export function markedTerminal(
+    options?: TerminalRendererOptions,
+    highlightOptions?: unknown
+  ): MarkedExtension
+
+  const _default: typeof markedTerminal
+  export default _default
 }

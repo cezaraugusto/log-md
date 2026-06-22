@@ -1,12 +1,12 @@
 import dedent from 'dedent'
 import {marked} from 'marked'
-import TerminalRenderer from 'marked-terminal'
+import {markedTerminal} from 'marked-terminal'
 import pintor from 'pintor'
 
 // Theme the terminal renderer with pintor instead of
 // marked-terminal's built-in chalk defaults.
-marked.setOptions({
-  renderer: new TerminalRenderer({
+marked.use(
+  markedTerminal({
     firstHeading: (text: string) => pintor.bold.magenta(text),
     heading: (text: string) => pintor.bold.green(text),
     strong: (text: string) => pintor.bold(text),
@@ -17,7 +17,7 @@ marked.setOptions({
     link: (text: string) => pintor.blue(text),
     href: (text: string) => pintor.underline.blue(text)
   })
-})
+)
 
 /**
  * Output Markdown using console.log for CLI.
@@ -28,7 +28,7 @@ export default function log (message: unknown, gutter?: boolean): void {
   // markdown and can pretty print to console
   const unquotedMessage = JSON.stringify(message).replace(/"(.*)"/, '$1')
 
-  const multiColorMessage = marked.parse(unquotedMessage)
+  const multiColorMessage = marked.parse(unquotedMessage) as string
 
   const prettyPrintMessage = multiColorMessage.replace(/\\n/g, '\n')
 
